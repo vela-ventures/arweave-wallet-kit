@@ -37,7 +37,7 @@ export default function useAddresses() {
 
       return () => removeEventListener("focus", sync);
     })();
-  }, [activeAddress, state, strategy]);
+  }, [strategy]);
 
   return addresses;
 }
@@ -67,7 +67,7 @@ export function useWalletNames() {
         );
       }
     })();
-  }, [addresses, state?.activeStrategy]);
+  }, [strategy]);
 
   return names;
 }
